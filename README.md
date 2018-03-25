@@ -29,6 +29,19 @@ The main purpose - demoing how to integrate these testing tools with Travis CI -
 ## Setup Project
 The initial project includes a basic calculator app. The app includes a **green title**, an **input box** for users to input expressions, a **button** to trigger calculation and an **textbox for displaying results**.
 
+### Try run the project
+```bash
+npm install
+```
+
+```bash
+npm start
+```
+
+```bash
+npm run test
+```
+
 ## Unit Tests using Mocha
 One unit test tests if calculator calculate 1+2 correctly (```calculator.test.js```).
 
