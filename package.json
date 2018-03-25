@@ -1,0 +1,33 @@
+{
+  "name": "ci",
+  "version": "0.0.1",
+  "description": "Project for CI Seminar",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "test:mocha": "mocha --reporter spec --require babel-register \"./*.test.js\"",
+    "test": "npm-run-all --parallel test:mocha cypress:run"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "3.5.0",
+    "chalk": "1.1.3",
+    "cypress": "^2.1.0",
+    "mocha": "^5.0.5",
+    "npm-run-all": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theKastle/ci.git"
+  },
+  "author": "lqtien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theKastle/ci/issues"
+  },
+  "homepage": "https://github.com/theKastle/ci#readme"
+}
