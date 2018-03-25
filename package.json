@@ -4,6 +4,7 @@
   "description": "Project for CI Seminar",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm i -g http-server",
     "start": "http-server",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
