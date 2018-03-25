@@ -1,4 +1,4 @@
-<h2 align="center">
+﻿<h2 align="center">
 Seminar: Continuous Integration with Travis CI
 </h2>
 
@@ -17,7 +17,7 @@ The project includes a very simple **Calculator webapp**.
 
 The main purpose - demoing how to integrate these testing tools with Travis CI - is rather simple. The following will explain briefly about CI, what we do in the project and then how to use Travis CI.
 
-## Continuous Integration and Travis CI in brief
+## Continuous Integration and Travis CI
 **Continuous Integration** is the practice of automatically building and testing code changes of each commit, providing immediate feedback on the testing outcome. This way, every time a commit cause problems we'll get notified and be able to react quickly to deal those problems.
 
 **Travis CI** docs gives us an excellent introduction to why we want to adopt the Continuous Integration practice. 
@@ -26,10 +26,10 @@ The main purpose - demoing how to integrate these testing tools with Travis CI -
 
 **Travis CI** is simply a platform that helps us do do those things.
 
-## Setup Project
+## Software under test
 The initial project includes a basic calculator app. The app includes a **green title**, an **input box** for users to input expressions, a **button** to trigger calculation and an **textbox for displaying results**.
-
-### Try run the project
+![alt text](https://image.ibb.co/dBTHs7/4.png)
+### Install and Running the Project
 ```bash
 npm install
 ```
@@ -37,13 +37,19 @@ npm install
 ```bash
 npm start
 ```
-
+![alt text](https://image.ibb.co/ntwns7/1.png)
 ```bash
 npm run test
 ```
+![alt text](https://image.ibb.co/da3YX7/2.png)
+![alt text](https://image.ibb.co/c7bgKn/3.png)
+
+When you run the test it will automatically opening your browser and closed when it finished. The details about the test cases passed or failed will be shown in your terminal
 
 ## Unit Tests using Mocha
 One unit test tests if calculator calculate 1+2 correctly (```calculator.test.js```).
+
+You can create your own test cases this is just a simple one for demo purposes.
 
 ## Functional Test using Cypress
 Including 2 tests (in ```./cypress/integration/index_spec.js```): 
