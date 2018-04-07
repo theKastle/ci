@@ -83,3 +83,86 @@ The above is our project's yml file. It tells Travis CI to install NodeJs, cachi
 5. Visit the build status page to check if your build passes or fails. 
 
 [1]:https://docs.travis-ci.com/user/for-beginners
+
+## Get started with Jenkins
+Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.
+
+Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.
+
+In this example, we will guide you to install and running Jenkin.
+
+First in order to run Jenkin you need to install Docker. The reason for this is we will be running Jenkins as a Docker container from the jenkinsci/blueocean Docker image
+
+#### Install Docker
+To install Docker, you just need to follow the guide on the website
+
+![alt text](https://image.ibb.co/chuvhH/5.png)
+ 
+But for some cases you might run into a problem like using windows 10 home like me with no Hyper-V which doesn’t allow you to install Docker. For replacement, you can download Docker toolbox which also can run Jenkin in it.
+
+Download link for Docker toolbox: ```https://docs.docker.com/toolbox/toolbox_install_windows/```
+
+If you install correctly, there should be 2 shortcuts like this on your laptop's desktop
+
+![alt text](https://image.ibb.co/gfKT2H/6.png)
+
+Go ahead and open Docker QuickStart Terminal and type in this command 
+
+![alt text](https://image.ibb.co/fgve9x/7.png)
+
+In this example my computer already downloaded jenkinsci/blueocean image but if this is your first time running it will automatically download the image and run it
+
+Basically, this command tells docker to run Jenkins CI on port 8080 with /var/jenkins_home directory in the container to the Docker volume with the name jenkins-data. If this volume does not exist, then this docker run command will automatically create the volume for you.
+
+Now it all set go ahead and open your browser and open https://localhost:8080. If that doesn’t work, please type the following command in the docker
+
+![alt text](https://image.ibb.co/cVWahH/8.png)
+
+This will give you your default. In this case type in 192.168.99.100:8080 and it will open a Setup Wizard for Jenkin if this is your first time running
+## Running Jenkin
+
+When you open the Setup Wizard of Jenkins it will require password for your first time running
+
+![alt text](https://image.ibb.co/jpN4bc/9.jpg)
+
+You can find the password in the docker terminal
+
+![alt text](https://image.ibb.co/k89vhH/9.png)
+
+Look for this following part in the terminal. In my case, the password is 4587d9dbf9664cee97d61ee2fb4075a0.
+
+In the next step, click on Install suggested plugins.
+
+Finally, Jenkins asks you to create your first administrator user.
+
+When the Create First Admin User page appears, specify your details in the respective fields and click Save and Finish. When the Jenkins is ready page appears, click Start using Jenkins.
+
+Now you are in the homepage of the Jenkin. Press new item to or create new jobs if this is the first time you are running
+
+![alt text](https://image.ibb.co/gnMmpx/10.png)
+
+Input you item name and select pipeline. Then select OK
+
+Then go to the pipeline section and input like in this image with the git link is the link to your own GitHub project that you need to test
+
+![alt text](https://image.ibb.co/jHDMNH/11.png)
+
+Click save and then select build now and let Jenkin run your test script. Notice all your test cases is store in the Jenkinsfile.txt
+
+![alt text](https://image.ibb.co/jAHgNH/12.png)
+
+You can also select open Blue Ocean to see your test’s progress
+
+![alt text](https://image.ibb.co/cF9Hwc/13.png)
+
+If your test runs successful, it will look like this
+
+![alt text](https://image.ibb.co/fapvhH/14.png)
+![alt text](https://image.ibb.co/gk6VGc/15.png)
+
+
+
+
+
+
+
