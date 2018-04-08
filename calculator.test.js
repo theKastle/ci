@@ -8,6 +8,6 @@ describe('Our basic calculator', () => {
   })
 
   it ('should eval 1*2*4 equals 8', () => {
-    expect(calculate('1*2*3')).to.equal(8);
+    expect(calculate('1*2*4')).to.equal(8);
   })
 })
