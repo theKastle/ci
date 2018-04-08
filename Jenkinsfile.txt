@@ -1,14 +1,27 @@
 pipeline {
     agent {
         docker {
-            image 'node:8' 
-            args '-p 3000:3000' 
+            image 'cypress/base:8'
+            args '-p 3000:3000'
         }
     }
+     environment { 
+        CI = 'true'
+    }
     stages {
-        stage('Build') { 
+        stage('BuildAndTest') { 
             steps {
-                sh 'npm install' 
+                sh 'pwd' 
+                sh 'wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -'
+                sh 'sh -c \'echo \"deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list\''
+                sh 'apt-get update'
+                sh 'apt-get install -y google-chrome-stable'
+                sh 'npm install'
+                sh 'npm i -g http-server'
+                sh 'export BUILD_ID=dontKillMe'
+                sh 'npm start &'
+                sh 'sleep 4'
+                sh 'npm run test'
             }
         }
     }
