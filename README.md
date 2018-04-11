@@ -1,5 +1,5 @@
 ﻿<h2 align="center">
-Seminar: Continuous Integration with Travis CI
+Seminar: Continuous Integration with Travis CI and Jenkins
 </h2>
 
 <p align="center">
@@ -7,7 +7,7 @@ Seminar: Continuous Integration with Travis CI
 </p>
 
 ## Introduction
-This project is for a Travis CI Seminar. 
+This project is for a Travis CI & Jenkins Seminar
 
 The project includes a very simple **Calculator webapp**. 
 
@@ -15,11 +15,12 @@ The project includes a very simple **Calculator webapp**.
 
 > For functional testing, we use a testing tool called Cypress. Its tests are written in javascript, hence it is very easy for frontend developers to adopt.
 
-The main purpose - demoing how to integrate these testing tools with Travis CI - is rather simple. The following will explain briefly about CI, what we do in the project and then how to use Travis CI.
+The main purpose - demoing how to integrate these testing tools with Travis CI & Jenkins - is rather simple. The following will explain briefly about CI, what we do in the project and then how to use Travis CI & Jenkins.
 
-## Continuous Integration and Travis CI
+## Continuous Integration
 **Continuous Integration** is the practice of automatically building and testing code changes of each commit, providing immediate feedback on the testing outcome. This way, every time a commit cause problems we'll get notified and be able to react quickly to deal those problems.
 
+## Travis CI
 **Travis CI** docs gives us an excellent introduction to why we want to adopt the Continuous Integration practice. 
 > Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.
 <cite>[Travis CI -What is Continuous Integration][1]</cite>
@@ -160,9 +161,33 @@ If your test runs successful, it will look like this
 ![alt text](https://image.ibb.co/fapvhH/14.png)
 ![alt text](https://image.ibb.co/gk6VGc/15.png)
 
+## Compare between Jenkins and Travis CI 
 
+#### Jenkins:
 
+```
+Pros: 
+	+ Free to download and use
+	+ Practically endless options for customization
+	+ An ever-growing collection of plugins
+```
+```
+Cons: 
+	+ Requires a dedicated server, which may entail an extra expense
+	+ Can take a while to configure and customize
+```
 
-
-
+#### Travis CI:
+```
+Pros: 
+	+ Lightweight and easy to set up
+	+ Free for open source projects
+	+ No dedicated server needed
+	+ Build matrix feature
+```
+```
+Cons: 
+	+ Enterprise plans come with a cost
+	+ Limited options for customization
+```
 
