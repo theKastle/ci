@@ -191,3 +191,8 @@ Cons:
 	+ Limited options for customization
 ```
 
+#### Slides & Videos:
+- https://docs.google.com/presentation/d/1stGAy1BwLl-JRSzW4yumOVAtJm-nkTR_bhw9sUt47rQ/edit?usp=sharing
+- https://www.youtube.com/watch?v=Dg8gT2uKnIo
+- https://www.youtube.com/watch?v=TZTFGlBaGTw
+
